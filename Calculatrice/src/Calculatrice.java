@@ -34,9 +34,11 @@ public class Calculatrice extends JFrame {
     private void switchMode(String mode) {
         getContentPane().removeAll();
         if(mode == "Basic"){
+            setSize(300, 400);
             System.out.println("basic");
             add(calculatriceBasic,BorderLayout.CENTER);
         }else{
+            setSize(670, 400);
             System.out.println("not basic");
             add(calculatriceScientific,BorderLayout.CENTER);
         }

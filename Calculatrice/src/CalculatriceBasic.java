@@ -12,75 +12,23 @@ public class CalculatriceBasic extends JPanel implements ActionListener {
         operationText = new JTextField();
         this.add(operationText, BorderLayout.NORTH);
 
-
-
         JPanel buttonsPAnel = new JPanel();
-
-
-
         buttonsPAnel.setLayout(new GridLayout(4,4,10,10));
-        JButton oneButton = new JButton("1");
-        oneButton.addActionListener(this);
-        buttonsPAnel.add(oneButton);
-        JButton twoButton = new JButton("2");
-        twoButton.addActionListener(this);
-        buttonsPAnel.add(twoButton);
 
-        JButton threeButton = new JButton("3");
-        threeButton.addActionListener(this);
-        buttonsPAnel.add(threeButton);
+        String[] buttons = {"7", "8", "9", "/",
+                "6", "5", "4", "*",
+                "3", "2", "1", "-",
+                "C", "0", ".", "+"};
 
-        JButton divButton = new JButton("/");
-        divButton.addActionListener(this);
-        buttonsPAnel.add(divButton);
+        for (String button : buttons){
+            JButton currentButton = new JButton(button);
+            currentButton.addActionListener(this);
+            buttonsPAnel.add(currentButton);
+        }
 
-        JButton fourButton = new JButton("4");
-        fourButton.addActionListener(this);
-        buttonsPAnel.add(fourButton);
 
-        JButton fiveButton = new JButton("5");
-        fiveButton.addActionListener(this);
-        buttonsPAnel.add(fiveButton);
 
-        JButton sixButton = new JButton("6");
-        sixButton.addActionListener(this);
-        buttonsPAnel.add(sixButton);
 
-        JButton prodButton = new JButton("*");
-        prodButton.addActionListener(this);
-        buttonsPAnel.add(prodButton);
-
-        JButton sevenButton = new JButton("7");
-        sevenButton.addActionListener(this);
-        buttonsPAnel.add(sevenButton);
-
-        JButton eightButton = new JButton("8");
-        eightButton.addActionListener(this);
-        buttonsPAnel.add(eightButton);
-
-        JButton nineButton = new JButton("9");
-        nineButton.addActionListener(this);
-        buttonsPAnel.add(nineButton);
-
-        JButton minisButton = new JButton("-");
-        minisButton.addActionListener(this);
-        buttonsPAnel.add(minisButton);
-
-        JButton cleanButton = new JButton("C");
-        cleanButton.addActionListener(this);
-        buttonsPAnel.add(cleanButton);
-
-        JButton zeroButton = new JButton("0");
-        zeroButton.addActionListener(this);
-        buttonsPAnel.add(zeroButton);
-
-        JButton virguleButton = new JButton(",");
-        virguleButton.addActionListener(this);
-        buttonsPAnel.add(virguleButton);
-
-        JButton plusButton = new JButton("+");
-        plusButton.addActionListener(this);
-        buttonsPAnel.add(plusButton);
         this.add(buttonsPAnel, BorderLayout.CENTER);
 
         JButton equalButton = new JButton("=");
