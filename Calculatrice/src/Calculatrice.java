@@ -12,6 +12,8 @@ public class Calculatrice extends JPanel implements ActionListener {
         operationText = new JTextField();
         this.add(operationText, BorderLayout.NORTH);
 
+
+
         JPanel buttonsPAnel = new JPanel();
 
 
@@ -89,6 +91,15 @@ public class Calculatrice extends JPanel implements ActionListener {
 
     public static void main(String[] args) {
         JFrame calculatrice = new JFrame("Calculatrice");
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menuMode = new JMenu("Mode");
+        JMenuItem basicItem = new JMenuItem("Basic");
+        JMenuItem scientificItem = new JMenuItem("scientific");
+
+        menuMode.add(basicItem);
+        menuMode.add(scientificItem);
+        menuBar.add(menuMode);
+        calculatrice.setJMenuBar(menuBar);
         calculatrice.setSize(300, 400);
         calculatrice.add(new Calculatrice());
         calculatrice.setVisible(true);
